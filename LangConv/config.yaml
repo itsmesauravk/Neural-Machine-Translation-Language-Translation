@@ -1,0 +1,32 @@
+# Paths to processed data CSV files
+data_paths:
+  cleaned_data_path: "./data/processed/cleaned_dataset.csv"
+  english_vocab_model_path: "./data/processed/spm_en.model"
+  german_vocab_model_path: "./data/processed/spm_de.model"
+
+# Vocabulary sizes for source (English) and target (German)
+src_vocab_size: 16000 #  SentencePiece vocab size
+trg_vocab_size: 16000 # Same here
+
+# Model hyperparameters
+embedding_dim: 256
+hidden_dim: 512
+num_layers: 2
+dropout: 0.5
+
+# Training hyperparameters
+batch_size: 32
+learning_rate: 0.001
+epochs: 10
+
+# Device to use for training
+device: "cuda" # use "cpu" if no GPU available
+
+# Special token IDs (must match your SentencePiece settings)
+pad_id: 0
+unk_id: 1
+bos_id: 2
+eos_id: 3
+
+# Maximum sequence length (for padding/truncating)
+max_seq_len: 30
