@@ -123,15 +123,13 @@ docker run -p 8000:8000 neural-translation-api
 
 ### Translation Endpoint
 
-**POST** `/translate`
+**POST** `/translate/{target_language}`
 
 Request body:
 
 ```json
 {
   "text": "Hello, how are you?",
-  "source_lang": "en",
-  "target_lang": "de"
 }
 ```
 
@@ -140,7 +138,7 @@ Response:
 ```json
 {
   "translated_text": "Hallo, wie geht es dir?",
-  "confidence": 0.87
+  "language":"german"
 }
 ```
 
